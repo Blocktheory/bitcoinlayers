@@ -36,7 +36,15 @@
   .font_playfair {
     @apply font-playfair-display italic font-normal;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
   /* .table-container {
     overflow: visible;
     position: relative;

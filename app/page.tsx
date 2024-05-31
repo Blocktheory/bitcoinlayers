@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="mx-auto">
       <Hero />
-      <div className="flex mb-10 justify-center -mt-14">
+      <div className="flex mb-12 justify-center -mt-14">
         <div className="justify-start items-start gap-4 inline-flex">
           <div
             className={`h-[30px] px-4 py-[5px] rounded-full border-2 justify-center items-center gap-1.5 flex cursor-pointer ${
