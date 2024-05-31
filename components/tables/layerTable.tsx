@@ -8,7 +8,12 @@ import Risk from "@/components/layer/layerTableItemRisk";
 import TableHeader from "@/components/tables/tableHeader";
 import { BrowserView, MobileView, isMobile } from "react-device-detect";
 
-type TableTabKey = "Risk" | "Type" | "Status" | "Unit" | "BTC Locked";
+type TableTabKey =
+  | "Risk"
+  | "Type"
+  | "Status"
+  | "Unit of Account"
+  | "BTC Locked";
 
 interface Props {
   data: Layer[];
@@ -78,7 +83,7 @@ const LayerTable = ({ data, headers }: Props) => {
           valueA = a.live;
           valueB = b.live;
           break;
-        case "Unit":
+        case "Unit of Account":
           valueA = a.nativeToken;
           valueB = b.nativeToken;
           break;
@@ -142,7 +147,7 @@ const LayerTable = ({ data, headers }: Props) => {
               "Risk",
               "Type",
               "Status",
-              "Unit",
+              "Unit of Account",
               "BTC Locked"
             ].includes(_item.name);
             return (
@@ -221,7 +226,7 @@ const LayerTable = ({ data, headers }: Props) => {
                     {item.live}
                   </td>
                 )}
-                {(!isMobile || mobileActiveTab === "Unit") && (
+                {(!isMobile || mobileActiveTab === "Unit of Account") && (
                   <td className="lg:px-6 px-4 py-3 lg:py-4 border-stroke_tertiary text_table_important text_table_body">
                     {item.nativeToken}
                   </td>

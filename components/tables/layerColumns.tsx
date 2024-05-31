@@ -20,7 +20,7 @@ export const layerColumns: Column[] = [
   },
   { header: "Type", accessor: "layerType" },
   { header: "Status", accessor: "live" },
-  { header: "Unit", accessor: "nativeToken" },
+  { header: "Unit of Account", accessor: "nativeToken" },
   {
     header: "BTC Locked",
     accessor: "btcLocked",
