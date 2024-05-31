@@ -63,11 +63,9 @@ const LayerTableRisks = ({ data }: Props) => {
         setMobileRiskTab(tab);
     };
 
-    console.log(data);
-
     return (
-        <div className="px-4 lg:px-0">
-            <MobileView>
+        <div className="px-6 lg:px-0">
+            <MobileView className="flex justify-center">
                 <div className="justify-center items-start gap-4 inline-flex flex-wrap py-3">
                     {layerHeaders.slice(1).map((_item, ind) => {
                         return (
@@ -136,7 +134,7 @@ const LayerTableRisks = ({ data }: Props) => {
                                 key={index}
                                 onClick={() => handleRowClick(`/layers/${item.slug}`)}
                             >
-                                <td className="flex items-center lg:px-6 px-4 lg:py-4 py-3 font-semibold whitespace-nowrap border-stroke_tertiary border-r text_table_body">
+                                <td className="flex items-center lg:px-6 px-4 lg:py-4 py-3 font-semibold whitespace-nowrap border-stroke_tertiary border-r text-table_body">
                                     <LayerImage
                                         src={`/logos/${item.slug}.png`}
                                         title={item.title}

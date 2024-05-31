@@ -172,7 +172,7 @@ const LayerTable = ({ data, headers }: Props) => {
             </MobileView>
 
             <div className="overflow-x-auto bg-lightsecondary rounded-xl mx-auto border border-stroke_tertiary relative">
-                <table className="bg-lightsecondary table-fixed w-full text-sm text-left rtl:text-right rounded-md">
+                <table className="bg-lightsecondary table-fixed w-full text-sm text-left rtl:text-right rounded-xl">
                     <TableHeader
                         headers={isMobile ? mobileTableHeaders : headers}
                         onSort={handleSort}
@@ -189,7 +189,7 @@ const LayerTable = ({ data, headers }: Props) => {
                                 key={item.slug} // Use item.slug as the unique key
                                 onClick={() => handleRowClick(`/layers/${item.slug}`)}
                             >
-                                <td className="flex items-center lg:px-6 px-4 py-4 font-semibold whitespace-nowrap border-l border-r lg:border-r-0  border-stroke_tertiary text_table_important">
+                                <td className="flex items-center lg:px-6 px-4 py-4 font-semibold whitespace-nowrap border-r lg:border-r-0  border-stroke_tertiary text_table_important text-table_body">
                                     <LayerImage
                                         src={`/logos/${item.slug}.png`}
                                         title={item.title}

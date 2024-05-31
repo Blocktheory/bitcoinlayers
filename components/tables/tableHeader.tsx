@@ -100,7 +100,7 @@ const TableHeader: React.FC<TableHeaderProps> = ({ headers, onSort, onFilter }) 
                                     </div>
                                 )}
                                 {header.showSorting && (
-                                    <div className="relative w-[11px] h-[22px] ml-2 flex flex-col items-center">
+                                    <div className="relative lg:w-[11px] lg:h-[22px] w-[8px] h-[18px] ml-2 flex flex-col items-center justify-center">
                                         <div
                                             className={`cursor-pointer ${
                                                 sortOrder[header.name] === true
