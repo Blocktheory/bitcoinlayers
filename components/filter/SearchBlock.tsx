@@ -39,12 +39,11 @@ const SearchBlock: FC = () => {
         .includes(input.toLowerCase())
     );
     setFilteredLayers(filteredLayers || []);
-    console.log(filteredLayers);
   };
 
   return (
     <div
-      className="w-1/4 relative"
+      className="w-[22rem] relative mb-10"
       ref={ref}
       role="presentation"
       onClick={handleFocus}
@@ -53,7 +52,7 @@ const SearchBlock: FC = () => {
         type="text"
         placeholder="Find Layer"
         onChange={handleInputSearch}
-        className="bg-white border-[3px] border-slate-300 rounded-full p-2 mt-9 w-full text-black pl-6 pr-12 outline-none h-11 font_playfair cursor-pointer hover:placeholder:text-slate-600 active:border-[#fe4e18] focus:border-[#fe4e18] text-xl"
+        className="bg-white border-2 border-slate-300 rounded-full p-2 mt-9 w-full text-black pl-6 pr-12 outline-none h-11 font_playfair cursor-pointer hover:placeholder:text-slate-600 active:border-[#fe4e18] focus:border-[#fe4e18] text-xl"
       />
 
       <Image
@@ -65,10 +64,7 @@ const SearchBlock: FC = () => {
       />
 
       {shouldRenderSearchResult() && (
-        <SearchResult
-          // inputValue={inputValue}
-          searchResult={filteredLayers}
-        />
+        <SearchResult searchResult={filteredLayers} />
       )}
     </div>
   );
