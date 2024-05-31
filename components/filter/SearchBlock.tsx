@@ -43,7 +43,7 @@ const SearchBlock: FC = () => {
 
   return (
     <div
-      className="w-[22rem] relative mb-10"
+      className="w-[22rem] relative mt-5"
       ref={ref}
       role="presentation"
       onClick={handleFocus}
