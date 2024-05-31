@@ -67,7 +67,7 @@ const LayerTableUpcoming = ({ data, headers }: Props) => {
           valueA = a.live;
           valueB = b.live;
           break;
-        case "Unit of Account":
+        case "Unit":
           valueA = a.nativeToken;
           valueB = b.nativeToken;
           break;
